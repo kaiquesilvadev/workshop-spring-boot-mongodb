@@ -15,6 +15,7 @@ import com.example.workshopMongo.domain.User;
 @RequestMapping("/users")
 public class UserResource {
 
+	//teste da aplicação antes de usar JPA 
 	@GetMapping
 	public ResponseEntity<List<User>> findAll() {
 		 List<User> p1 = Arrays.asList(
