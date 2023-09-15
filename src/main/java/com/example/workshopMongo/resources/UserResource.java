@@ -1,6 +1,7 @@
 package com.example.workshopMongo.resources;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.example.workshopMongo.domain.User;
+import com.example.workshopMongo.dto.UserDTO;
 import com.example.workshopMongo.services.UserService;
 
 @RestController
@@ -22,11 +24,13 @@ public class UserResource {
 	
 	
 	@GetMapping
-	public ResponseEntity<List<User>> findAll() {
-		List<User> p1 = Service.findAll();
-		if(p1.isEmpty()) 
+	public ResponseEntity<List<UserDTO>> findAll() {
+		List<User> list = Service.findAll();
+		List<UserDTO> listDTO = list.stream().map(x -> new UserDTO(x)).collect(Collectors.toList());
+		if(list.isEmpty()) 
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 		
-		return ResponseEntity.ok().body(p1);
+		return ResponseEntity.ok().body(listDTO
+				);
 	}
 }
