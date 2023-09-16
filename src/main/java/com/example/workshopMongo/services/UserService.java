@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.workshopMongo.domain.User;
+import com.example.workshopMongo.dto.UserDTO;
 import com.example.workshopMongo.repositories.UserRepository;
-import com.example.workshopMongo.services.exception.ObjectNotFoundException;
 
 @Service
 public class UserService {
@@ -22,5 +22,12 @@ public class UserService {
 
 	public Optional<User> findById(String id) {
 		return repository.findById(id);
+	}
+	
+	public User insert(UserDTO userDTO) {
+		User user = new User();
+		user.setEmail(userDTO.getEmail());
+		user.setName(userDTO.getName());
+		return repository.insert(user);
 	}
 }
