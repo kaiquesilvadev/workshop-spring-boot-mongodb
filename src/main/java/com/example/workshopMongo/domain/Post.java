@@ -5,6 +5,8 @@ import java.util.Date;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.example.workshopMongo.dto.AuthorDTO;
+
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -28,5 +30,5 @@ public class Post implements Serializable{
 	@NotBlank
 	private String title;
 	private String body;
-	private User author;
+	private AuthorDTO author;
 }
