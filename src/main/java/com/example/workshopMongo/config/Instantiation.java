@@ -21,7 +21,7 @@ public class Instantiation implements CommandLineRunner{
 	private UserRepository repository;
 	
 	@Autowired
-	private PostRepository postReposiroty;
+	private PostRepository postRepositoty;
 	
 	@Override
 	public void run(String... args) throws Exception {
@@ -30,7 +30,7 @@ public class Instantiation implements CommandLineRunner{
 		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
 	
 		repository.deleteAll();
-		postReposiroty.deleteAll();
+		postRepositoty.deleteAll();
 		
 		User maria = new User(null, "Maria Brown", "maria@gmail.com");
 		User alex = new User(null, "Alex Green", "alex@gmail.com");
@@ -41,9 +41,9 @@ public class Instantiation implements CommandLineRunner{
 		Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem", "Vou viajar para São Paulo. Abraços!", new AuthorDTO(maria));
 		Post post2 = new Post(null, sdf.parse("23/03/2018"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO(maria));
 
-		postReposiroty.saveAll(Arrays.asList(post1 , post2));
-		maria.get().addAll(Arrays.asList(post1, post2));
-		Reposiroty.save(maria);
+		postRepositoty.saveAll(Arrays.asList(post1 , post2));
+		maria.getPosts().addAll(Arrays.asList(post1, post2));
+		repository.save(maria);
 	}
 
 }
