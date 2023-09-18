@@ -5,9 +5,12 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.example.workshopMongo.domain.Post;
 import com.example.workshopMongo.domain.User;
 import com.example.workshopMongo.dto.UserDTO;
 import com.example.workshopMongo.repositories.UserRepository;

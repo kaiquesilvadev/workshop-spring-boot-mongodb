@@ -1,6 +1,7 @@
 package com.example.workshopMongo.resources;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.example.workshopMongo.domain.Post;
 import com.example.workshopMongo.domain.User;
 import com.example.workshopMongo.dto.UserDTO;
 import com.example.workshopMongo.services.UserService;
@@ -64,5 +66,16 @@ public class UserResource {
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).body(userAtualizado);
+	}
+
+	@GetMapping("/{id}/posts")
+	public ResponseEntity<List<Post>> findPost(@PathVariable String id) {
+		Optional<List<Post>> listaPosts = Service.findById(id).map(User::getPosts);
+	    
+	    if (listaPosts.isPresent()) {
+	        return ResponseEntity.ok(listaPosts.get());
+	    } else {
+	       throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+	    }
 	}
 }
