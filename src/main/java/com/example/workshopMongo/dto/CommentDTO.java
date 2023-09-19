@@ -3,8 +3,6 @@ package com.example.workshopMongo.dto;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.example.workshopMongo.domain.Comment;
-
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
