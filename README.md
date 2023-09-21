@@ -65,3 +65,9 @@ Se você deseja contribuir para este projeto, siga estas etapas:
 
 Por favor, certifique-se de seguir as diretrizes de contribuição.
 
+## Contato
+
+Se você tiver alguma dúvida, sugestões ou precisar de suporte, não hesite em entrar em contato:
+
+- **LinkedIn:** [João Kaique](https://www.linkedin.com/in/joaokaique/)
+
