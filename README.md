@@ -36,3 +36,32 @@ Siga as instruções abaixo para configurar e executar o projeto em sua máquina
 
 ```bash
 git clone https://github.com/kaiquesilvadev/workshop-spring-boot-mongodb.git
+
+````
+
+2. Navegue até o diretório do projeto:
+
+```bash
+cd workshop-springboot3-jpa
+
+```
+
+3. Execute o aplicativo Spring Boot:
+
+```bash
+./mvnw spring-boot:run
+
+```
+
+## Contribuições
+
+Se você deseja contribuir para este projeto, siga estas etapas:
+
+1. Fork o projeto
+2. Crie uma branch para a sua feature (`git checkout -b feature/sua-feature`)
+3. Commit suas mudanças (`git commit -m 'Adicione sua feature'`)
+4. Push para a branch (`git push origin feature/sua-feature`)
+5. Abra um Pull Request
+
+Por favor, certifique-se de seguir as diretrizes de contribuição.
+
