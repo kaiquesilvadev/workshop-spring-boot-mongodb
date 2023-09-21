@@ -2,7 +2,9 @@
 
 **Descrição do Projeto**
 
-Este espaço foi criado com o objetivo de documentar e compartilhar minha jornada de aprendizado com o Spring Boot. O Spring Boot é conhecido por sua simplicidade e eficiência, sendo uma ferramenta poderosa para a construção de aplicativos Java. Além disso, estamos explorando o uso de bancos de dados NoSQL, que oferecem flexibilidade e escalabilidade em ambientes de armazenamento de dados.
+Este espaço foi criado com o objetivo de documentar e compartilhar minha jornada de aprendizado com o Spring Boot. O Spring Boot é conhecido por sua simplicidade e eficiência, sendo uma ferramenta poderosa para a construção de aplicativos Java. Além disso, estou explorando o uso de bancos de dados NoSQL, que oferecem flexibilidade e escalabilidade em ambientes de armazenamento de dados.
+
+## Diagrama de Classes
 
 ![Diagrama de Classes](https://github.com/kaiquesilvadev/workshop-spring-boot-mongodb/blob/main/Captura%20de%20tela%202023-09-21%20185349.png)
 
